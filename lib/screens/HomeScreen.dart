@@ -1,3 +1,4 @@
+import 'package:ecommerce_flutter/components/ProductCard.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
@@ -54,15 +55,24 @@ class _HomeScreenState extends State<HomeScreen> {
                   Expanded(
                     child: GridView.builder(
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 20,
+                            mainAxisSpacing: 20,
+                            childAspectRatio: (10/13)
                         ),
                         physics: const NeverScrollableScrollPhysics(),
                         itemCount: wines.length,
+                        padding: const EdgeInsets.all(20),
+                        clipBehavior: Clip.antiAlias,
                         itemBuilder: (context, index) {
                           return Container(
-                            margin: const EdgeInsets.all(20),
                             color: Colors.grey,
-                            child: Text(wines[index]["name"]),
+                            child: ProductCard(
+                              img: wines[index]["img"], 
+                              name: wines[index]["name"],
+                              price: wines[index]["price"],
+                              rating: wines[index]["rating"],
+                          )
                           );
                         }),
                   ),
