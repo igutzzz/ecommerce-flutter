@@ -58,21 +58,18 @@ class _HomeScreenState extends State<HomeScreen> {
                             crossAxisCount: 2,
                             crossAxisSpacing: 20,
                             mainAxisSpacing: 20,
-                            childAspectRatio: (10/13)
+                            childAspectRatio: (10/15)
                         ),
                         physics: const NeverScrollableScrollPhysics(),
                         itemCount: wines.length,
                         padding: const EdgeInsets.all(20),
                         clipBehavior: Clip.antiAlias,
                         itemBuilder: (context, index) {
-                          return Container(
-                            color: Colors.grey,
-                            child: ProductCard(
-                              img: wines[index]["img"], 
-                              name: wines[index]["name"],
-                              price: wines[index]["price"],
-                              rating: wines[index]["rating"],
-                          )
+                          return ProductCard(
+                            img: wines[index]["img"], 
+                            name: wines[index]["name"],
+                            price: wines[index]["price"],
+                            rating: wines[index]["rating"],
                           );
                         }),
                   ),
