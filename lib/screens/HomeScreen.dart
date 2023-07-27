@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> readJson() async {
     final String response =
-        await rootBundle.loadString("assets/data/wines.json");
+        await rootBundle.loadString("data/wines.json");
     final data = await jsonDecode(response);
     setState(() {
       wines = data["wines"];
@@ -26,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     readJson();
+    print(wines);
   }
 
   @override
@@ -35,15 +36,40 @@ class _HomeScreenState extends State<HomeScreen> {
           appBarTheme: AppBarTheme(backgroundColor: Colors.green[700]),
           textTheme: GoogleFonts.poppinsTextTheme()),
       home: Scaffold(
-        appBar: AppBar(
-          leading: BackButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
+          appBar: AppBar(
+            leading: BackButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+            title: const Text("Home"),
           ),
-          title: const Text("Home"),
-        ),
-      ),
+          body: SingleChildScrollView(
+            child: Container(
+              height: double.maxFinite,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text("Vinhos"),
+                  Expanded(
+                    child: GridView.builder(
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2
+                        ),
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: wines.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            margin: const EdgeInsets.all(20),
+                            color: Colors.grey,
+                            child: Text(wines[index]["name"]),
+                          );
+                        }),
+                  ),
+                ],
+              ),
+            ),
+          )),
     );
   }
 }
