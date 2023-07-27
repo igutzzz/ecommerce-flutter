@@ -53,9 +53,15 @@ class ProductCard extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Text(price.toString()), Text(rating.toString())],
+            Container(
+              padding: EdgeInsets.only(left: 10, right: 10)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("R$ ${price.toString()}"), 
+                  Text(rating.toString())
+                  ],
+              )
             )
           ],
         ),
