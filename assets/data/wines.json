@@ -1,0 +1,60 @@
+{
+    "wines": [
+        {
+            "name": "Paine Cabernet Sauvignon 2021 375 mL",
+            "img" : "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/28329-01.png",
+            "price": 35.99,
+            "rating": 4.4,
+            "description": "Essencialmente frutado e leve, este vinho foi idealizado para ser apreciado sem compromisso, apreciando o momento e as companhias, ou acompanhando petiscos ou pratos em refeições informais. O seu nome é uma referência ao Paine National Park, que engloba florestas antigas, montanhas, glaciares, lagos e rios na Patagônia chilena. Um vinho leve, com um perfil fácil e muito agradável!"
+        },
+        {
+            "name": "U by Undurraga Valle Central Cabernet Sauvignon 2021 187,5 mL",
+            "img" : "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/28148-01.png",
+            "price": 29.99,
+            "rating": 5.0,
+            "description": "A linha U by Undurraga é uma linha de entrada da renomada vinícola Undurraga que tem como objetivo se aproximar dos consumidores ao trazer vinhos descomplicados, com encantador buquê de aromas primários e com satisfatório frescor. Esse Cabernet Sauvignon foi produzido com uvas cultivadas e selecionadas de vinhedos do Vale Central chileno, teve passagem por tanques de aço inox para manter o frescor e as características naturais da uva. É um vinho com um perfil fácil de beber, excelente para desfrutar socialmente com os amigos e acompanhar uma noite de pizzas!"
+        },
+        {
+            "name": "Ímpetu Merlot",
+            "img" : "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/26829-01.png",
+            "price": 49.99,
+            "rating": 4.7,
+            "description": "Com breve amadurecimento em madeira, este tinto frutado e macio traz a Merlot, uma uva de origem francesa que se adaptou muito bem em terroir chileno. Com um estilo fácil de beber, este exemplar é indicado para quem está iniciando no mundo do vinho ou para quem busca rótulos descomplicados, ideal para ser aproveitado nos momentos descompromissados e relaxantes. Elaborado com uvas selecionadas de diversas regiões do Chile expressando seu verdadeiro terroir."
+        },
+        {
+            "name": "Altos del Condor Tinto 2022",
+            "img" : "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/28483-01.png",
+            "price": 50.00,
+            "rating": 4.0,
+            "description": "Comentário do Sommelier Este tinto de estilo jovem e frutado, une a uva emblemática da Argentina, a Malbec, com a Tempranillo, uma das mas famosas variedades da Espanha muito bem adaptada em terroir argentino. Macio e fácil de beber, é ideal para acompanhar refeições do dia a dia e momentos descontraídos, como um bate papo com os amigos."
+        },
+        {
+            "name": "Planted in 1922 Tinto 2022",
+            "img" : "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/29342-01.png",
+            "price": 64.90,
+            "rating": 3.9,
+            "description": "Planted in 1922 é uma linha elaborada pela Bodegas Barberis, uma vinícola familiar movida pela paixão e pela filosofia de produção que une tradição e modernidade com compromisso de produzir de forma mais limitada para garantir a alta qualidade em todos os seus vinhos. Este é um blend de uvas cuidadosamente selecionadas elaborado em Mendoza, região argentina renomada na produção de vinhos. Um exemplar jovem, frutado, com taninos macios, agradável frescor e com final persistente e agradável. É um vinho fácil de beber, excelente opção para o dia a dia!"
+        },
+        {
+            "name": "Ballade Cabernet Sauvignon 2022",
+            "img" : "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/28752-01.png",
+            "price": 41.90,
+            "rating": 4.2,
+            "description": "Ballade Cabernet Sauvignon é um vinho leve, frutado e harmônico da Miolo, vinícola brasileira reconhecida e premiada internacionalmente. Sinônimo de qualidade, tradição e pioneirismo no plantio de uvas finas no Brasil, tem na paixão pela vitivinicultura o desejo de levar mundo afora o vinho fino brasileiro, e isto tornou a Miolo a maior exportadora de vinhos do Brasil e a mais reconhecida no mercado internacional! A linha Ballade é produzida exclusivamente para a Wine, uma parceria de sucesso e muito bem avaliada que você só encontra aqui! Exemplar da variedade Cabernet Sauvignon cultivada em vinhedos próprios localizados na região da Campanha Central, Rio Grande do Sul. Vinho com perfil jovem, descomplicado, leve e muito agradável. Adequado para veganos."
+        },
+        {
+            "name": "Rocinha",
+            "img" : "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/20883-01.png",
+            "price": 29.90,
+            "rating": 4.1,
+            "description": "Quando o assunto é vinho, Portugal é solo de tradição e muita diversidade: possui nada menos que 250 castas autóctones - as famosas uvas nativas. A oportunidade perfeita para você conhecer um pouco mais desse mix de história e sabor, é por meio de um saboroso Rocinha Tinto. Uma curiosidade sobre este rótulo é que foi feito em homenagem à favela da Rocinha, no Rio de Janeiro!"
+        },
+        {
+            "name": "Alfacinha Regional Lisboa Tinto 2021",
+            "img" : "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/28385-01.png",
+            "price": 34.90,
+            "rating": 4.8,
+            "description": "Alfacinha nasce para homenagear as tradições populares de Lisboa. Antes de ser um vinho, é uma alcunha que surge em meados do século XIX, na prestigiada obra “Viagens na Minha Terra” de Almeida Garrett, e que hoje é reconhecida em qualquer parte do mundo. Um néctar que durante a prova nos transporta numa viagem dentro de um típico elétrico amarelo, pelas ruas íngremes da capital portuguesa, marcadas pela calçada irregular. Um exemplar com um estilo fácil de beber e agradar, macio no paladar e muito equilibrado!"
+        }
+    ]
+}
