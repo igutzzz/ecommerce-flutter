@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProductCard extends StatelessWidget {
+  final String id;
   final String img;
   final String name;
   final double price;
@@ -9,6 +10,7 @@ class ProductCard extends StatelessWidget {
 
   const ProductCard(
       {super.key,
+      required this.id,
       required this.img,
       required this.name,
       required this.price,
@@ -23,7 +25,8 @@ class ProductCard extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadiusDirectional.circular(10),
             color: Colors.grey[200]),
-        padding: const EdgeInsets.all(10),
+        padding:
+            const EdgeInsets.only(top: 10, right: 10, bottom: 30, left: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,9 +35,9 @@ class ProductCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Colors.white),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.white),
                   child: Center(
                       child: Image.network(
                     img,
@@ -47,21 +50,20 @@ class ProductCard extends StatelessWidget {
                   child: Text(
                     name,
                     style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w600, fontSize: 16
-                    ),
+                        fontWeight: FontWeight.w600, fontSize: 16),
                   ),
                 ),
               ],
             ),
-            Container(
-              padding: EdgeInsets.only(left: 10, right: 10)
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("R$ ${price.toString()}"), 
-                  Text(rating.toString())
-                  ],
-              )
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "R\$${price.toString()}",
+                  style: GoogleFonts.poppins(fontSize: 16),
+                ),
+                Text(rating.toString())
+              ],
             )
           ],
         ),

@@ -66,6 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         clipBehavior: Clip.antiAlias,
                         itemBuilder: (context, index) {
                           return ProductCard(
+                            id: wines[index]["id"],
                             img: wines[index]["img"], 
                             name: wines[index]["name"],
                             price: wines[index]["price"],
