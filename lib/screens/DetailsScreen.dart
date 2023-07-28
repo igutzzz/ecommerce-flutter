@@ -25,8 +25,8 @@ class Wine {
     name = json["name"];
     img = json["img"];
     description = json["description"];
-    price = json[price];
-    rating = json[rating];
+    price = json["price"];
+    rating = json["rating"];
   }
 }
 
@@ -62,11 +62,28 @@ class _DetailsScreenState extends State<DetailsScreen> {
           ),
           title: const Text("Detalhes"),
         ),
-        body: Column(
-          children: [
-            Hero(tag: "product$widget.id", child: Image.network(wine.img)),
-            Text(wine.name)
-          ],
+        body: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Hero(tag: "product$widget.id", 
+                child: Center(
+                  child: Image.network(wine.img, height: 450,)
+                )),
+                Text(wine.name),
+                Text(wine.price.toString()),
+                ElevatedButton(onPressed: (){}, child: const Text("Adicionar ao carrinho")),
+                Column(
+                  children: [
+                    const Text("Descrição"),
+                    Text(wine.description)
+                  ],
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );
