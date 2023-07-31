@@ -3,6 +3,7 @@ import 'dart:core';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DetailsScreen extends StatefulWidget {
   final int id;
@@ -53,6 +54,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+          appBarTheme: AppBarTheme(backgroundColor: Colors.green[700]),
+          textTheme: GoogleFonts.interTextTheme(),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ButtonStyle(
+            backgroundColor:
+                MaterialStatePropertyAll<Color>(Colors.green.shade700),
+          ))),
       home: Scaffold(
         appBar: AppBar(
           leading: BackButton(
@@ -60,7 +69,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
               Navigator.pop(context);
             },
           ),
-          title: const Text("Detalhes"),
+          title: Text(
+            "Detalhes",
+            style: GoogleFonts.poppins(),
+          ),
         ),
         body: SingleChildScrollView(
           child: Container(
@@ -68,18 +80,37 @@ class _DetailsScreenState extends State<DetailsScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Hero(tag: "product$widget.id", 
-                child: Center(
-                  child: Image.network(wine.img, height: 450,)
-                )),
-                Text(wine.name),
-                Text(wine.price.toString()),
-                ElevatedButton(onPressed: (){}, child: const Text("Adicionar ao carrinho")),
+                Hero(
+                    tag: "product$widget.id",
+                    child: Center(
+                        child: Image.network(
+                      wine.img,
+                      height: 450,
+                    ))),
+                Text(
+                  wine.name,
+                  style: GoogleFonts.inter(
+                      fontSize: 28.0, fontWeight: FontWeight.bold),
+                ),
+                Container(
+                  padding: const EdgeInsets.only(top: 10, bottom: 10),
+                  child: Text(
+                    "R\$${wine.price.toString()}",
+                    style: GoogleFonts.inter(
+                      fontSize: 20
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(double.infinity, 50),
+                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
+                    ),
+                    child: const Text("Adicionar ao carrinho"),
+                  ),
                 Column(
-                  children: [
-                    const Text("Descrição"),
-                    Text(wine.description)
-                  ],
+                  children: [const Text("Descrição"), Text(wine.description)],
                 )
               ],
             ),
