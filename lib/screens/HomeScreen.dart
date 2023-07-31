@@ -50,8 +50,18 @@ class _HomeScreenState extends State<HomeScreen> {
               height: double.maxFinite,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text("Vinhos"),
+                  Container(
+                    padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
+                    child: Text(
+                      "Vinhos",
+                      style: GoogleFonts.poppins(
+                        fontSize: 28.0,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
                   Expanded(
                     child: GridView.builder(
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -62,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         physics: const NeverScrollableScrollPhysics(),
                         itemCount: wines.length,
-                        padding: const EdgeInsets.all(20),
+                        padding: const EdgeInsets.only(left: 20, right: 20),
                         clipBehavior: Clip.antiAlias,
                         itemBuilder: (context, index) {
                           return ProductCard(
