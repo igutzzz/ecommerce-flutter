@@ -110,7 +110,20 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     child: const Text("Adicionar ao carrinho"),
                   ),
                 Column(
-                  children: [const Text("Descrição"), Text(wine.description)],
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.only(top: 10, bottom: 10),
+                      child: Text(
+                        "Descrição",
+                        style: GoogleFonts.inter(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w600
+                        ),
+                      ),
+                    ), 
+                    Text(wine.description)
+                  ],
                 )
               ],
             ),
